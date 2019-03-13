@@ -1,8 +1,9 @@
 package ii328.comweb.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * 类的说明
@@ -11,10 +12,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
  */
 @Controller
 public class HomeController {
+    Logger logger = LoggerFactory.getLogger("sss");
 
-    @ResponseBody
+
     @RequestMapping("/index")
     public String index() {
-        return "sdfsf";
+
+        logger.error("sdfsdfsdfsf");
+        return "home/index";
     }
 }
